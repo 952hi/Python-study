@@ -90,3 +90,6 @@ def simulate():
     return time
 
 print(simulate())
+
+# 느낀점
+# pop(0), -1 % 4, map함수
