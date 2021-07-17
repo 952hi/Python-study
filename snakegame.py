@@ -17,7 +17,8 @@ data = [[0] * (n + 1) for _ in range(n + 1)]
 # 명령을 입력받을 통을 만든다
 info = []
 
-
+# 사과위치를 받아 그값 을 1로 설정
+# map함수로 정수처리
 for i in range(k):
     a, b = map(int, input().split())
     data[a][b] = 1
@@ -50,20 +51,21 @@ def simulate():
     # 머리위치
     x, y = 1, 1
     # 뱀이 xy 좌표값에 위치하면 2로 표시
-
     data[x][y] = 2
+    # 방향 초기값 0 -> 동쪽
     direction = 0 
     time = 0
 
-    #명령을 카운트하는      
+    # 명령을 카운트 
     index = 0
 
+    # 뱀이 차지하고 있는 위치정보 저장
     q = [(x, y)] 
     while True:
         nx = x + dx[direction]
         ny = y + dy[direction]
 
-        
+        # 게임판안에 위치하고, 꼬리에 안 부딪혔다면 조건문실행
         if 1 <= nx and nx <= n and 1 <= ny and ny <= n and data[nx][ny] != 2:
             
             if data[nx][ny] == 0:
@@ -76,7 +78,7 @@ def simulate():
                 data[nx][ny] = 2
                 q.append((nx, ny))
 
-        # 예외처리 벽에 부딪치거나 꼬리에 머리가 닿았을때
+        # 예외처리 벽에 부딪치거나 꼬리에 머리가 부딪칠때
         else:
             time += 1
             break        
@@ -92,4 +94,4 @@ def simulate():
 print(simulate())
 
 # 느낀점
-# pop(0), -1 % 4, map함수
+# pop(0), -1 % 4, map함수 
