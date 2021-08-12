@@ -50,21 +50,31 @@ def heap_sort(d):
         c = i
 
         while c > 0:
+            # 트리에서 부모와 자식 관계 왼쪽자식 = 루트*2+1 부모 = (자식-1) // 2
             root = (c - 1) // 2
 
+            # 자식이 루트보다 크면 교환 
             if d[c] > d[root]:
                 d[c], d[root] = d[root], d[c]
+
+            # 자식을 루트로 바꿔 그 위 부모와 다시비교
             c = root
     
-    for i in range(a - 1, -1, -1):  
+    for i in range(a - 1, -1, -1):
+
+        #최대힙이므로 큰값인 루트값을 빼서 마지막으로 이동
         d[0], d[i] = d[i], d[0]
         root, c = 0, 1
 
         while c < i:
+
             c = root * 2 + 1
+
+            # 왼쪽 오른쪽 자식 비교 우측이 크면 자식 값 증가
             if c < i - 1 and d[c] < d[c + 1]:
                 c += 1
 
+            # 자식이 루트보다 크면 자식 부모 교환
             if c < i and d[c] > d[root]:
                 d[c], d[root] = d[root], d[c]
             root = c
@@ -83,11 +93,3 @@ heap_sort(temp)
 print()
 for _ in range(N):
     print(temp.pop())
-
-
-
-
-
-
-
-
