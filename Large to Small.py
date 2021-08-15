@@ -49,7 +49,9 @@ def heap_sort(d):
     for i in range(1, a):
         c = i
 
+        # 루트노드가 될때까지 반복
         while c > 0:
+
             # 트리에서 부모와 자식 관계 왼쪽자식 = 루트*2+1 부모 = (자식-1) // 2
             root = (c - 1) // 2
 
@@ -66,6 +68,7 @@ def heap_sort(d):
         d[0], d[i] = d[i], d[0]
         root, c = 0, 1
 
+        # 리프노드가 될때까지 반복
         while c < i:
 
             c = root * 2 + 1
