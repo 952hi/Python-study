@@ -82,6 +82,7 @@ def solution(board):
 
     # 큐에 로봇 위치 시간을 저장
     q.append((pos, 0)) 
+    
     # 로봇이 있는자리 방문처리
     visited.append(pos) 
     

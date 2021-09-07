@@ -33,6 +33,7 @@
 
 import itertools
 import math
+
 def solution(n, weak, dist):
     
     # 취약점 갯수
@@ -55,7 +56,7 @@ def solution(n, weak, dist):
         # permutations(리스트, 뽑아올수)
 
         for d in itertools.permutations(dist, len(dist)):
-            # 출동시킨 사람의 수
+            
             cnt = 1
             pos = start
 
@@ -88,5 +89,5 @@ def solution(n, weak, dist):
 
 # 느낀점
 # DFS와 비슷한 면이 있다고 느꼈지만 그냥 처음부터 끝까지 반복이 아니라
-# 각 경우마다 값이 다르기 때문에 1234와 1324 1432
-# itertools.permutations의 수열을 만드는 함수를 몰라 애를 먹었습니다
+# 각 경우마다 값이 다르기 때문에 1234와 
+# itertools.permutations의 수열을 만드는 함수를 몰라 힘들었다
