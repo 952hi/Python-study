@@ -1,5 +1,4 @@
 import math
-import sys
 def madeonedigit():
     x = int(input())
     result= [0,1,1,1,2,1]
