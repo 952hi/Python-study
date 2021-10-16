@@ -20,7 +20,7 @@ for i in a:
     for j in b:
         hap = int(j) + hap
     num.append(hap)
-    
+
 n = num[0]
 for i in range(1, len(num)):
     n -= num[i]

@@ -31,9 +31,9 @@ n = int(input())
 answer = [666]
 
 for i in range(1,n):
-    answer.insert(0,str(i)+"666")
+    answer.append(str(i)+"666")
 
-print(answer.pop(0))
+print(answer[n-1])
 
 # -----------------------------------------------------------------------------------------------------------------
 n = int(input())
@@ -52,6 +52,7 @@ while True:
     if count == n:
         print(result)
         break
+    
     # 제목에 +1
     result += 1
     print(result)
