@@ -76,6 +76,10 @@ https://www.acmicpc.net/problem/1517
 
 정렬 중 스왑이 일어나는 횟수를 출력하기
 
+버블정렬 문제이지만 크기가 매우 커서 n2 복잡도인 버블정렬로는 문제를 풀수 없었다.
+
+#느낀점
+문제이름만 보고 치우치면 안될것 같다.
 
 '''
 
@@ -99,7 +103,11 @@ def mergeSort(start, end):
                 b += 1
                 cnt += (mid - a + 1)
                   
-        
+        if a <= mid:
+            tmp = tmp + arr[a:mid+1]
+            
+        if b <= end:
+            tmp = tmp + arr[b:end+1]
             
 
         for i in range(len(tmp)):
