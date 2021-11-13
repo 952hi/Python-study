@@ -1,6 +1,9 @@
-import itertools
-a= [1, 2], [2, 2], [4, 4]
+import math
+def solution(n):
+    if int(math.sqrt(n)) ** 2 == n :
+        answer = int((math.sqrt(n)+1)) ** 2
+    else:
+        answer = -1
+    return answer
 
-b = list(itertools.combinations(a, 3))
-
-print(b[0])
+print(solution(144))
