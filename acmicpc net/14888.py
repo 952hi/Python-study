@@ -1,4 +1,3 @@
-  
 '''
 https://www.acmicpc.net/problem/14888 
 백준 14888번 
@@ -33,8 +32,8 @@ digit = list(map(int,input().split()))
 add,sub,mul,div = map(int , input().split())
 
 # 비교할 변수에 무한대 값 대입
-comp_min = sys.maxsize
-comp_max = -sys.maxsize
+comp_min = math.inf
+comp_max = -math.inf
 
 #사용한 숫자의 개수 , 첫번째숫자값
 def dfs(i,now):
