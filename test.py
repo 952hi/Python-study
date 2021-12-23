@@ -1,9 +1,7 @@
-import sys
+import heapq
 
-input = sys.stdin.readline
+q = []
 
-n = int(input())
-
-comp = list(map(int,input().split()))
-
-print(comp)
+heapq.heappush(q, (1,2,3))
+a,b,c = heapq.heappop(q)
+print(a,b,c)

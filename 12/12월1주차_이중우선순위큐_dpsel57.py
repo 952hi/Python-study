@@ -1,6 +1,7 @@
 '''
 https://programmers.co.kr/learn/courses/30/lessons/42628
 이중우선순위 큐
+
 I 숫자	큐에 주어진 숫자를 삽입합니다.
 D 1	큐에서 최댓값을 삭제합니다.
 D -1	큐에서 최솟값을 삭제합니다.
