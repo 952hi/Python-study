@@ -10,6 +10,15 @@ https://www.acmicpc.net/problem/14888
 
 느낀점
 간단하게 dfs로 풀수 잇는 문제였습니다.
+
+입력예시
+6
+1 2 3 4 5 6
+2 1 1 1
+
+출력예시
+54
+-24
 '''
 import sys
 input = sys.stdin.readline
