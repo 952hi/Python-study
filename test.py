@@ -1,4 +1,7 @@
-a = 246
-b = 10
+from itertools import combinations
+import itertools
 
-print(a/b)
+a= 5
+b= 3
+
+print(list(itertools.combinations(range(1,a+1),b)))
