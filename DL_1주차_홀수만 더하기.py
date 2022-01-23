@@ -1,3 +1,6 @@
+'''
+2022 01 23
+'''
 import sys
 input = sys.stdin.readline
 
@@ -10,4 +13,5 @@ for i in range(T):
         if (temp[j]%2)==1 :
             sum += temp[j]
     print("#%d %d"% ((i+1),sum))
+    
         
